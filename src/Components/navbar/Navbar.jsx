@@ -10,10 +10,9 @@ const Navbar = () => {
                 <img src={logo} alt="Logo" className="logo" />
             </div>
             <ul className="nav-list">
-                <li><Link to="/home">Home</Link></li>
-                <li><Link to="/resume">Resume</Link></li>
-                <li><Link to="/">Projects</Link></li>
-                <li><Link to="/">Blogs</Link></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="#projects">Projects</Link></li>
+                <li><Link to="#blogs">Blogs</Link></li>
             </ul>
         </div>
     );

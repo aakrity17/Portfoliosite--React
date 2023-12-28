@@ -5,18 +5,21 @@
 }
 
 body {
-    /* background-color: #444; */
-    background-image: url('../../Images/home-bg.jpg');
+    background-color: black;
+    /* background-image: url('../../Images/home-bg.jpg'); */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar {
-    /* background-color: #222; */
+    color: white;
+    background-color: black;
+    /* background-color: rgba(137, 43, 226, 0.433); */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     z-index: 1;
+
 }
 
 .logo-container {
@@ -40,9 +43,10 @@ li {
     margin-right: 20px;
 }
 
+/* navbar text */
 a {
     text-decoration: none;
-    color: #fff;
+    color: white;
     padding: 15px 20px;
     transition: background-color 0.3s ease;
 }
@@ -65,4 +69,68 @@ a:hover {
     li {
         margin: 0;
     }
+}
+
+/* Add some basic styling to the navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the logo */
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Style the navigation list */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Style the main navigation items */
+.nav-list li {
+    position: relative;
+}
+
+/* Style the About dropdown when open */
+.dropdown-open {
+    background-color: #555;
+    /* Add background color when dropdown is open */
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the dropdown menu items */
+.dropdown-menu li {
+    padding: 10px;
+}
+
+/* Style the dropdown menu links */
+.dropdown-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Style the dropdown menu links on hover */
+.dropdown-menu a:hover {
+    background-color: rgba(255, 255, 0, 0.366);
 }

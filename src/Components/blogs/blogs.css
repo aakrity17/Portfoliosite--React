@@ -5,11 +5,7 @@
     overflow: hidden;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
-<<<<<<< HEAD
-    /* box-sizing: border-box; */
     background-color: rgba(125, 6, 236, 0.026);
-=======
->>>>>>> 7c7287d4d87e2e542d83657df11850fdb2b91468
 }
 
 .site__info {
@@ -38,8 +34,6 @@
 }
 
 .card__image {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
     display: block;
     min-height: 240px;
@@ -50,18 +44,10 @@
 .card__image>img {
     display: block;
     margin-bottom: 0;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -ms-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
 }
 
 .card__image:hover>img {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
     transform: scale(1.2);
 }
 
@@ -74,18 +60,11 @@
     line-height: 1.2;
     margin-bottom: 0.75em;
     text-decoration: none;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
-.card__title:hover {
-<<<<<<< HEAD
-    /* color: rgba(255, 255, 255, 0.7); */
-=======
+.cardtitle:hover {
     color: rgba(255, 255, 255, 0.7);
->>>>>>> 7c7287d4d87e2e542d83657df11850fdb2b91468
-    text-decoration: none;
 }
 
 .card__overlay {
@@ -107,11 +86,7 @@
 }
 
 .card__overlay--blue {
-<<<<<<< HEAD
-    /* background-image: linear-gradient(to bottom, rgba(41, 182, 246, 0.1), rgba(41, 182, 246, 0.8)); */
-=======
     background-image: linear-gradient(to bottom, rgba(41, 182, 246, 0.1), rgba(41, 182, 246, 0.8));
->>>>>>> 7c7287d4d87e2e542d83657df11850fdb2b91468
     z-index: 2;
 }
 
@@ -133,11 +108,7 @@
 }
 
 .card__meta li {
-<<<<<<< HEAD
-    /* color: #f8f8f8; */
-=======
     color: #f8f8f8;
->>>>>>> 7c7287d4d87e2e542d83657df11850fdb2b91468
     display: inline;
     list-style-type: none;
     margin-bottom: 0;
@@ -151,11 +122,7 @@
     content: "●";
     font-style: normal;
     position: relative;
-<<<<<<< HEAD
-    /* color: rgba(255, 255, 255, 0.25); */
-=======
     color: rgba(255, 255, 255, 0.25);
->>>>>>> 7c7287d4d87e2e542d83657df11850fdb2b91468
     right: -0.6em;
 }
 

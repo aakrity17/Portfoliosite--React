@@ -1,5 +1,5 @@
 import React from 'react';
-import './myservices.css'; // Import your CSS file for styling
+import './myservices.css';
 import '../../Images/about.png'
 
 const Myservices = () => {

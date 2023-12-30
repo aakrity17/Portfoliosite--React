@@ -1,75 +1,71 @@
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
+import './register.css';
 
-const LoginForm = () => {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm();
+const Login = () => {
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+    });
 
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [error, setError] = useState('');
 
-    const onSubmit = (data) => {
-        // Retrieve registered users from local storage
-        const registeredUsers = JSON.parse(localStorage.getItem("registered-users")) || [];
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
 
-        // Find user with matching email and password
-        const user = registeredUsers.find(
-            (u) => u.email === data.email && u.password === data.password
-        );
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+        const user = storedUsers.find((u) => u.email === formData.email && u.password === formData.password);
 
         if (user) {
-            // Display the "Successfully logged in" message
-            setLoggedIn(true);
+            // Clear form data and display success message
+            setFormData({
+                email: '',
+                password: '',
+            });
+
+            setError('');
+            alert('Login successful!'); // You may want to redirect instead of using an alert
         } else {
-            alert('Invalid email or password. Please try again.');
+            setError('Invalid email or password');
         }
     };
 
     return (
-        <div className="login-form-container">
-            <h2>Login Form</h2>
-            {!loggedIn ? (
-                <form onSubmit={handleSubmit(onSubmit)} className="login-form">
-                    <div className="form-group">
-                        <label>Email:</label>
-                        <input
-                            {...register('email', {
-                                required: 'This field is required',
-                                pattern: {
-                                    value: /^\S+@\S+$/i,
-                                    message: 'Invalid email address',
-                                },
-                            })}
-                            className={`form-control ${errors.email ? 'error' : ''}`}
-                        />
-                        <p className="error-message">{errors.email?.message}</p>
-                    </div>
-
-                    <div className="form-group">
-                        <label>Password:</label>
-                        <input
-                            type="password"
-                            {...register('password', {
-                                required: 'This field is required',
-                            })}
-                            className={`form-control ${errors.password ? 'error' : ''}`}
-                        />
-                        <p className="error-message">{errors.password?.message}</p>
-                    </div>
-
-                    <button type="submit" className="submit-button">
-                        Login
-                    </button>
-                </form>
-            ) : (
-                <div className="logged-in-message">
-                    <p>Successfully logged in!</p>
+        <div className="form-container">
+            <h2>Login</h2>
+            {error && <p className="error-message">{error}</p>}
+            <form onSubmit={handleSubmit}>
+                <div className="form-group">
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
                 </div>
-            )}
+                <div className="form-group">
+                    <label htmlFor="password">Password:</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>
+                Don't have an account? <Link to="/register">Register</Link>
+            </p>
         </div>
     );
 };
 
-export default LoginForm;
+export default Login;

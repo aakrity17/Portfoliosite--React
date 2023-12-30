@@ -1,54 +1,27 @@
-.service {
-    margin-bottom: 35px;
+myService.css .my-service-container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.service-title {
+h2 {
+    color: #333;
+}
+
+p {
     margin-bottom: 20px;
 }
 
-.service-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.service-item {
-    position: relative;
-    background: var(--border-gradient-onyx);
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: var(--shadow-2);
-    z-index: 1;
-}
-
-.service-item::before {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    background: var(--bg-gradient-jet);
-    border-radius: inherit;
-    z-index: -1;
-}
-
-.service-icon-box {
+li {
     margin-bottom: 10px;
 }
 
-.service-icon-box img {
-    margin: auto;
-}
-
-.service-content-box {
-    text-align: center;
-}
-
-.service-item-title {
-    margin-bottom: 7px;
-}
-
-.service-item-text {
-    color: white;
-    font-size: 20px;
-    font-weight: var(--fw-3);
-    line-height: 1.6;
-}
+/* Add more styling as needed */

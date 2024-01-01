@@ -1,27 +1,49 @@
-myService.css .my-service-container {
-    width: 80%;
-    margin: 50px auto;
+/* AwesomeServiceCards.css */
+
+.awesome-service-cards {
+    text-align: center;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #333;
-}
-
-p {
+.section-title {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.service-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-li {
+.service-card {
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-/* Add more styling as needed */
+.card-description {
+    font-size: 16px;
+}

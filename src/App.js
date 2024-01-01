@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+
 import Navbar from './Components/navbar/Navbar';
 import Resume from './Components/resume/Resume';
 import Home from './Components/Myhome/Home';
@@ -10,6 +11,7 @@ import Contact from './Components/contact/Contact';
 import Myservices from './Components/myservices/Myservices';
 import Login from './Components/login/Login'
 import Register from './Components/login/Register'
+// import Timelines from './Components/timelines/Timelines';
 
 export default function App() {
   return (
@@ -25,7 +27,8 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
-          <Route path="/Myservices" element={<Myservices />} />
+          <Route path="/myservices" element={<Myservices />} />
+          {/* <Route path="/Timelines" element={Timelines />} /> */}
         </Routes>
       </BrowserRouter>
       <Footer />

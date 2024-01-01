@@ -18,7 +18,6 @@ const Navbar = () => {
 
             <ul className="nav-list">
                 <li><Link to="/">Home</Link></li>
-
                 {/* About with dropdown */}
                 <li className={isAboutDropdownOpen ? 'dropdown-open' : ''} onClick={toggleAboutDropdown}>
                     <span>About</span>
@@ -26,7 +25,7 @@ const Navbar = () => {
                         <ul className="dropdown-menu">
                             <li><Link to="/resume">Resume</Link></li>
                             <li><Link to="/blogs">Blogs</Link></li>
-                            <li><Link to="/myServices">MyServices</Link></li>
+                            <li><Link to="/myservices">Myservices</Link></li>
                             <li><Link to="/contact">Contact</Link></li>
 
                         </ul>

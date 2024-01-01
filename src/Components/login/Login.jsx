@@ -64,6 +64,8 @@ const Login = () => {
             <p>
                 Don't have an account? <Link to="/register">Register</Link>
             </p>
+            {/* <Link to="/home">Go to Main Page</Link> */}
+
         </div>
     );
 };

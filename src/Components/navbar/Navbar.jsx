@@ -5,18 +5,29 @@ import logo from '../../Images/logo.png';
 
 const Navbar = () => {
     const [isAboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+    const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const toggleAboutDropdown = () => {
         setAboutDropdownOpen(!isAboutDropdownOpen);
     };
 
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
-        <div className="navbar">
+        <div className={`navbar ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
             <div className="logo-container">
                 <img src={logo} alt="Logo" className="logo" />
             </div>
 
-            <ul className="nav-list">
+            <div className="mobile-menu-button" onClick={toggleMobileMenu}>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+            </div>
+
+            <ul className={`nav-list ${isMobileMenuOpen ? 'mobile-menu' : ''}`}>
                 <li><Link to="/">Home</Link></li>
                 {/* About with dropdown */}
                 <li className={isAboutDropdownOpen ? 'dropdown-open' : ''} onClick={toggleAboutDropdown}>
@@ -25,14 +36,11 @@ const Navbar = () => {
                         <ul className="dropdown-menu">
                             <li><Link to="/resume">Resume</Link></li>
                             <li><Link to="/blogs">Blogs</Link></li>
-                            <li><Link to="/myservices">Myservices</Link></li>
-                            <li><Link to="/contact">Contact</Link></li>
-
                         </ul>
                     )}
                 </li>
-                <li><Link to="/register">Register</Link></li>
-                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/myservices">Myservices</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
         </div>
     );
